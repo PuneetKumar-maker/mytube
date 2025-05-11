@@ -1,0 +1,31 @@
+const videoFiles = [
+  'travel1.mp4',
+  'cooking_show.mp4',
+  'music_mix.mp4'
+];
+
+const videoList = document.getElementById('videoList');
+
+videoFiles.forEach(file => {
+  const title = file.replace(/\.[^/.]+$/, '').replace(/_/g, ' '); // remove extension, replace _ with space
+  const card = document.createElement('div');
+  card.className = 'video-card';
+  card.setAttribute('data-title', title.toLowerCase());
+
+  card.innerHTML = `
+    <video controls preload="metadata" src="videos/${file}"></video>
+    <p>${title}</p>
+  `;
+
+  videoList.appendChild(card);
+});
+
+function searchVideos() {
+  const input = document.getElementById('search').value.toLowerCase();
+  const videos = document.querySelectorAll('.video-card');
+
+  videos.forEach(card => {
+    const title = card.getAttribute('data-title');
+    card.style.display = title.includes(input) ? 'block' : 'none';
+  });
+}
