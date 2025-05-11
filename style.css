@@ -1,0 +1,69 @@
+/* General body and layout styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f9;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header {
+  background-color: #ffeb3b;
+  width: 100%;
+  padding: 1rem 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #555;
+}
+
+/* Video grid */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.video-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  text-align: center;
+}
+
+video {
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+video:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s;
+}
+
+/* Footer */
+footer {
+  background-color: #ffeb3b;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+}
